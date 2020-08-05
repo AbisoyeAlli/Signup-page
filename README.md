@@ -3,4 +3,4 @@ Built with Mailchimp API, this is a simple signup page that collects user info f
 
 ### npm i express body-parser request
 
-Deployed on heroku on this (link)[https://still-hollows-04523.herokuapp.com/]
+Deployed on heroku on this [https://still-hollows-04523.herokuapp.com/]
