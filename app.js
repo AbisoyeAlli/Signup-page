@@ -28,11 +28,14 @@ app.post('/', (req, res)=>{
       }
     ]
   };
+  
+  //X = SPECIAL DIGIT AS DESIGNATED ON MAILCHIMP ACCOUNT
+  
   const jsonData = JSON.stringify(data);
-  const url = "https://us17.api.mailchimp.com/3.0/lists/38c40fd3ad";
+  const url = "https://usX.api.mailchimp.com/3.0/lists/{list_id}";
   const options = {
     method: 'POST',
-    auth:"corporatecoder:fdd2f65a65fb39b375f941dd400de93b-us17"
+    auth:"userName:{apikey}"
   }
   const request = https.request(url, options, (response) => {
     if(response.statusCode === 200){
@@ -46,8 +49,6 @@ app.post('/', (req, res)=>{
   });
 request.write(jsonData);
 request.end();
-  //api key: fdd2f65a65fb39b375f941dd400de93b-us17
-  //list id: 38c40fd3ad
 });
 
 app.post('/failure', (req, res) => {
